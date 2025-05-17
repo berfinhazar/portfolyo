@@ -1,5 +1,5 @@
 import React from 'react';
-import profilFoto from './animasyon/images_profil.png';
+import profilFoto from './animasyon/images_profile.png';
 
 import '../components/giris.css';  // CSS dosyasını burada import ettik
 
@@ -16,5 +16,6 @@ const SolPanel = () => {
         </div>
     );
 };
+
 
 export default SolPanel;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Giris.css';
-import profilFoto from './animasyon/images_profil.png';
-import hosgeldinfoto from './animasyon/hosgeldiniz.png';
+import profilFoto from './animasyon/images_profile.png';
+import hosgeldinfoto from './animasyon/hosgeldiniz_images.png';
 
 
 function Giriş() {
@@ -14,6 +14,7 @@ function Giriş() {
 
         return () => clearTimeout(zamanlayici);
     }, []);
+
 
     return (
         <div className={`giris-kapsayici ${introBitti ? 'intro-bitti' : ''}`}>

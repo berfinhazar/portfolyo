@@ -14,6 +14,7 @@ const Navbar = () => {
     );
 };
 
+
 const styles = {
     navbar: {
         position: 'fixed',

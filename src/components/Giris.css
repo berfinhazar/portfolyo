@@ -9,7 +9,6 @@ html, body {
     overflow-x: hidden;
     color: white;
 }
-
 @keyframes bgAnim {
     0% {
         background-position: 0% 50%;

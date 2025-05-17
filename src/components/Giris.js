@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Giris.css';
+import profilFoto from './animasyon/images_profil.png';
+import hosgeldinfoto from './animasyon/hosgeldiniz.png';
+
 
 function Giriş() {
     const [introBitti, setIntroBitti] = useState(false);
@@ -14,16 +17,22 @@ function Giriş() {
 
     return (
         <div className={`giris-kapsayici ${introBitti ? 'intro-bitti' : ''}`}>
+            <div className="panel-arka-plan"></div>
             <div className="sol-panel">
                 <img
-                    src="/profil.png" // public klasörüne koyacağın resim dosyası
+                    src={profilFoto}  // import edilen değişkeni kullan
                     alt="Profil"
                     className="profil-resmi"
                 />
                 <h1 className="isim">Berfin Hazar</h1>
-                <p className="meslek">Frontend Geliştirici</p>
+                <p className="meslek">Bilgisayar Mühendisi</p>
             </div>
             <div className="intro-yazi">
+                <img
+                    src={hosgeldinfoto}
+                    alt="Hoş Geldin Foto"
+                    className="hosgeldin-foto"
+                />
                 <h1>Hoş geldin!</h1>
                 <p>Portfolyoma göz atmaya hazır mısın?</p>
             </div>

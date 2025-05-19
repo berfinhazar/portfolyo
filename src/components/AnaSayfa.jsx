@@ -10,7 +10,7 @@ const AnaSayfa = () => {
         console.log("AnaSayfa yüklendi ✅");
         const timer = setTimeout(() => {
             setGirisBitti(true);
-        }, 6000); // 6 saniye sonra animasyon kalksın
+        }, 3000);
 
         return () => clearTimeout(timer);
     }, []);

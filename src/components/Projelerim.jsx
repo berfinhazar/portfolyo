@@ -158,4 +158,5 @@ const styles = {
     },
 };
 
+
 export default Projelerim;

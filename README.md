@@ -1,58 +1,41 @@
-Özet
-Bu proje, modern web teknolojileri kullanılarak geliştirilmiş, kişisel bir portföy web sitesidir. React kütüphanesi temel alınarak oluşturulan uygulama, kullanıcının profesyonel profilini, eğitim ve projelerini etkili bir şekilde sergilemeyi amaçlamaktadır. Tasarım sürecinde responsive yapı ve kullanıcı deneyimi önceliklendirilmiştir. Site, animasyon ve görsel öğelerle desteklenerek dinamik ve çağdaş bir kullanıcı arayüzü sunmaktadır.
+## Canlı Yayın
+Portfolyomu bağlantıya tıklayarak ziyaret edebilirsiniz.
 
-Teknoloji ve Araçlar
-Uygulama geliştirilirken aşağıdaki teknolojiler ve araçlar tercih edilmiştir:
+portfolyo-cnywu7k8z-berfins-projects-6fdc37c9.vercel.app
 
-React: Kullanıcı arayüzü oluşturmak için kullanılan açık kaynak JavaScript kütüphanesi.
+## Kullanılan Teknolojiler ve Araçlar
 
-Lottie-react: JSON tabanlı animasyonları kolayca entegre etmek için kullanılmıştır.
+- **React:** Kullanıcı arayüzü oluşturmak için kullanılan açık kaynak JavaScript kütüphanesi.
+- **Lottie-react:** JSON tabanlı animasyonların kolayca entegre edilmesini sağlar.
+- **CSS:** Esnek ve modern stil düzenlemeleri için kullanılmıştır.
+- **Vercel:** Projenin canlı ortamda yayınlanması ve barındırılması için tercih edilen bulut platformu.
 
-CSS: Stil ve düzenlemelerde esneklik sağlamak amacıyla kullanılmıştır.
+---
 
-Vercel: Projenin canlı ortamda yayınlanması ve barındırılması için tercih edilen bulut platformu.
+## Özellikler
 
-Özellikler
-Projede aşağıdaki başlıca özellikler bulunmaktadır:
+- Açılışta kullanıcı dostu animasyonlu karşılama ekranı
+- Sol panelde kişisel fotoğraf, isim ve meslek bilgileri
+- Kolay ve hızlı gezinme sağlayan navigasyon barı
+- Responsive (mobil uyumlu) tasarım
+- Projeler ve iletişim bölümleriyle kapsamlı bilgi sunumu
 
-Açılışta kullanıcı dostu animasyonlu karşılama ekranı.
+---
 
-Sol panelde kişisel fotoğraf, isim ve meslek bilgileri.
+## Kurulum ve Çalıştırma
 
-Navigasyon barı aracılığıyla site içi kolay ve hızlı gezinme.
+Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
-Responsive tasarım ile farklı cihazlarda uyumlu görünüm.
+1. Depoyu klonlayın:
+   ```bash
+   git clone https://github.com/berfinhazar/portfolyo.git
+2. Proje Dizinine Geçiniz:
+   ```bash
+   cd proje-adi
+3. Bağımlılıkları Yükleyiniz:
+   ```bash
+   npm install
+4. Uygulamayı Başlatınız:
+   ```bash
+   npm start
 
-Projeler ve iletişim bölümleri ile kapsamlı bilgi sunumu.
-
-Kurulum ve Çalıştırma
-Projeyi yerel geliştirme ortamınızda çalıştırmak için aşağıdaki adımları takip ediniz:
-
-Depoyu klonlayınız:
-
-bash
-Kopyala
-Düzenle
-git clone https://github.com/kullaniciadi/proje-adi.git
-Proje dizinine geçiniz:
-
-bash
-Kopyala
-Düzenle
-cd proje-adi
-Bağımlılıkları yükleyiniz:
-
-bash
-Kopyala
-Düzenle
-npm install
-Uygulamayı başlatınız:
-
-bash
-Kopyala
-Düzenle
-npm start
-Canlı Yayın
-Bu proje, Vercel platformu kullanılarak aşağıdaki adreste canlı olarak yayınlanmaktadır:
-
-https://berfinhazar.vercel.app

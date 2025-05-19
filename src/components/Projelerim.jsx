@@ -3,7 +3,7 @@ import Lottie from 'lottie-react';
 import { motion } from 'framer-motion';
 
 import proje1Anim from './animasyon/yemek.json';
-import proje2Anim from './animasyon/oyun.json';
+import proje2Anim from './animasyon/oyun2.json';
 import proje3Anim from './animasyon/yemek2.json';
 import proje4Anim from './animasyon/notebook.json';
 

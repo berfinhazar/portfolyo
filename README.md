@@ -1,7 +1,6 @@
 ## Canlı Yayın
-Portfolyomu bağlantıya tıklayarak ziyaret edebilirsiniz.
 
-portfolyo-cnywu7k8z-berfins-projects-6fdc37c9.vercel.app
+[Portfolyomu bağlantıya tıklayarak ziyaret edebilirsiniz.](portfolyo-kohl.vercel.app)
 
 ## Kullanılan Teknolojiler ve Araçlar
 

@@ -12,7 +12,6 @@ const AnaSayfa = () => {
             setGirisBitti(true);
         }, 3000);
 
-
         return () => clearTimeout(timer);
     }, []);
 

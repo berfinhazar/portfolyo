@@ -3,8 +3,9 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(-45deg, #0a0218, #0e0322,#13042f, #0a0218, #231140);
+    background: linear-gradient(-45deg, #0a0218, #0e0322,#1a0541, #0e0322, #231140);
     background-size: 400% 400%;
+    background-attachment: fixed;
     animation: bgAnim 12s ease infinite;
     overflow-x: hidden;
     color: white;
@@ -32,8 +33,9 @@ html, body {
     transition: all 1s ease;
 
 }
-
-.app-container {
+.app-container, .iletisim-container, .baska-container {
+    background: transparent !important;  /* kendi arka planı yok */
+}p-container {
     min-height: 100vh;
     background: linear-gradient(-45deg, #0a0218, #0e0322,#13042f, #0a0218, #231140);
     background-size: 400% 400%;
@@ -42,32 +44,32 @@ html, body {
 }
 .intro-yazi {
     text-align: center;
+    margin-left: 100px;
     z-index: 2;
+    margin-bottom: 10px;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateY(-150px); /* ⬅ Yukarı kaydırma */
+    font-size: 20px;
+}
+
+.hosgeldin-animasyon {
+    width: 250px;
+    max-height: 300px;
+    margin: 0 auto 20px auto;
+    margin-right: 110px;
+    transform: translateX(600px); /* 100px sağa kaydır */
+    margin-top: 110px;
     transition: transform 1s ease, opacity 1s ease;
 }
 
-.hosgeldin-foto {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 300px;       /* Genişlik sınırı */
-    max-width: 80vw;    /* Ekranın %80’inden büyük olmasın */
-    max-height: 300px;  /* Yükseklik sınırı */
-    height: auto;
-    object-fit: contain; /* Oranları korusun */
-    transition: transform 1s ease, opacity 1s ease;
-}
-.giris-kapsayici.intro-bitti .intro-yazi,
-.giris-kapsayici.intro-bitti .hosgeldin-foto {
-    transform: translateX(-50vw);
-    opacity: 0;
-}
+
 
 .sol-panel {
     position: fixed;
     left: 0;
     width: 300px;
     height: 100vh;
-    background-color: #0a0218;
+    background-color: #0e0322;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,6 +82,65 @@ html, body {
 .giris-kapsayici.intro-bitti .sol-panel {
     transform: translateX(0);
 }
+.anasayfa-kapsayici {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 1;
+}
+
+.giris-bitti {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50px);
+}
+
+    .animasyon-wrapper {
+        width: 350px !important;
+        max-width: 80% !important;
+       margin-bottom: 600px;
+        margin-left: 250px !important;
+        margin-right: 0 !important;
+        float: right !important;
+        transform: translateX(0) !important;
+    }
+
+
+    /* ... diğer stiller ... */
+    .kaydir-notu {
+        position: absolute;
+        bottom: 450px;
+        left: 60%; /* ⬅ Bu değeri azaltarak daha sola kaydırın */
+        margin-left: 20px; /* İsterseniz bunu da azaltabilirsiniz */
+        transform: translateX(-50%);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+
+@keyframes yukariAsagi {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}.gizli {
+     opacity: 0;
+     pointer-events: none;
+     transform: translateY(-50px);
+ }
+
+.giris-geldi {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
 
 .profil-resmi {
     width: 200px;
@@ -89,6 +150,7 @@ html, body {
 
     margin-top: -50px;
 }
+
 
 
 .isim {
@@ -102,3 +164,149 @@ html, body {
     font-size: 16px;
     color: #bbb;
 }
+.sosyal-linkler {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.3rem;
+}
+.instalink{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.3rem;
+}
+.ikon {
+    width: 20px;   /* küçük boyut */
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.instaicon{
+    width: 25px;   /* küçük boyut */
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.instaicon:hover{
+    transform: scale(1.3);
+}
+.ikon:hover {
+    transform: scale(1.3);
+}
+.iletisim-container {
+    margin-left: 300px;
+    padding: 40px 20px;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .iletisim-container {
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+}
+
+.iletisim-animasyon {
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.iletisim-animasyon > div {
+    width: 100% !important;
+}
+
+.iletisim-baslik {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.iletisim-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    margin-top: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    resize: none;
+}
+
+.iletisim-button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0e0322;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    padding-left: 300px; /* Sol panel boşluğu */
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Mobil ve tablet görünümü */
+@media (max-width: 1024px) {
+    .navbar {
+        padding-left: 1rem;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+}
+

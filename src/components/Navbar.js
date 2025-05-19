@@ -7,7 +7,7 @@ const Navbar = () => {
                 <li><a href="#anasayfa" style={styles.link}>Ana Sayfa</a></li>
                 <li><a href="#benkimim" style={styles.link}>Ben Kimim?</a></li>
                 <li><a href="#neler" style={styles.link}>Neler Yapabilirim?</a></li>
-                <li><a href="#portfolyo" style={styles.link}>Portfolyo</a></li>
+                <li><a href="#portfolyo" style={styles.link}>Projelerim</a></li>
                 <li><a href="#iletisim" style={styles.link}>İletişim</a></li>
             </ul>
         </nav>
@@ -19,7 +19,7 @@ const styles = {
         position: 'fixed',
         top: 0,
         width: '100%',
-        backgroundColor: '#0a0218',
+        backgroundColor: '#0e0322',
         display: 'flex',
          // Menü sağa yaslanır
         alignItems: 'center',

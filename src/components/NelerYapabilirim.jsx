@@ -9,7 +9,7 @@ const NelerYapabilirim = () => {
         <section id="neler" style={styles.container}>
             <h2 style={styles.baslik}>Neler Yapacağım?</h2>
 
-            {/* 3D Printer Kartı */}
+            {}
             <div style={styles.card}>
                 <div style={styles.animation}>
                     <Lottie animationData={printerAnim} loop={true} />
@@ -33,7 +33,7 @@ const NelerYapabilirim = () => {
                 </div>
             </div>
 
-            {/* Oyun Geliştirme Kartı */}
+            {}
             <div style={styles.card}>
                 <div style={styles.animation}>
                     <Lottie animationData={oyunAnim} loop={true} />
@@ -48,7 +48,7 @@ const NelerYapabilirim = () => {
                 </div>
             </div>
 
-            {/* Tasarım Kartı */}
+            {}
             <div style={styles.card}>
                 <div style={styles.animation}>
                     <Lottie animationData={tasarimAnim} loop={true} />

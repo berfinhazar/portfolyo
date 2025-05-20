@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import { Player } from "@lottiefiles/react-lottie-player";
-import contactAnim from "./animasyon/mail.json"; // animasyon dosyan buraya
+import contactAnim from "./animasyon/mail.json";
 import './Giris.css'
 
 export default function Iletisim() {
@@ -31,7 +31,7 @@ export default function Iletisim() {
     return (
         <div
             style={{
-                marginLeft: "300px", // sol panel genişliği kadar boşluk bırak
+                marginLeft: "300px",
                 minHeight: "100vh",
                 display: "flex",
                 flexDirection: "column",
@@ -41,17 +41,17 @@ export default function Iletisim() {
                 color: "white",
             }}
         >
-            {/* Animasyon Üstte Ortalanmış */}
+            {}
             <div style={{ width: "350px", marginBottom: "30px" }}>
                 <Player autoplay loop src={contactAnim} style={{ width: "100%" }} />
             </div>
 
-            {/* Açıklama yazısı */}
+            {}
             <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: "22px" }}>
                 Benimle her zaman iletişime geçebilirsiniz.
             </h2>
 
-            {/* Form */}
+            {}
             <form
                 ref={form}
                 onSubmit={sendEmail}

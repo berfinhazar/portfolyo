@@ -23,7 +23,7 @@ const styles = {
         display: 'flex',
          // Menü sağa yaslanır
         alignItems: 'center',
-        padding: '1rem 2rem 1rem 30rem',  // Solda geniş boşluk, sağda az
+        padding: '1rem 2rem 1rem 30rem',
         color: '#fff',
         zIndex: 1000,
         boxShadow: '0 4px 8px rgba(0,0,0,0.3)',

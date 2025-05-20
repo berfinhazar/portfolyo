@@ -34,7 +34,7 @@ html, body {
 
 }
 .app-container, .iletisim-container, .baska-container {
-    background: transparent !important;  /* kendi arka planı yok */
+    background: transparent !important;
 }p-container {
     min-height: 100vh;
     background: linear-gradient(-45deg, #0a0218, #0e0322,#13042f, #0a0218, #231140);
@@ -48,7 +48,7 @@ html, body {
     z-index: 2;
     margin-bottom: 10px;
     transition: transform 1s ease, opacity 1s ease;
-    transform: translateY(-150px); /* ⬅ Yukarı kaydırma */
+    transform: translateY(-150px);
     font-size: 20px;
 }
 
@@ -57,7 +57,7 @@ html, body {
     max-height: 300px;
     margin: 0 auto 20px auto;
     margin-right: 110px;
-    transform: translateX(600px); /* 100px sağa kaydır */
+    transform: translateX(600px);
     margin-top: 110px;
     transition: transform 1s ease, opacity 1s ease;
 }
@@ -111,12 +111,12 @@ html, body {
     }
 
 
-    /* ... diğer stiller ... */
+
     .kaydir-notu {
         position: absolute;
         bottom: 450px;
-        left: 60%; /* ⬅ Bu değeri azaltarak daha sola kaydırın */
-        margin-left: 20px; /* İsterseniz bunu da azaltabilirsiniz */
+        left: 60%;
+        margin-left: 20px;
         transform: translateX(-50%);
         color: white;
         font-size: 20px;
@@ -175,14 +175,14 @@ html, body {
     margin-top: 0.3rem;
 }
 .ikon {
-    width: 20px;   /* küçük boyut */
+    width: 20px;
     height: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .instaicon{
-    width: 25px;   /* küçük boyut */
+    width: 25px;
     height: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -270,13 +270,13 @@ html, body {
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
-    padding-left: 300px; /* Sol panel boşluğu */
+    padding-left: 300px;
     color: #fff;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Mobil ve tablet görünümü */
+
 @media (max-width: 1024px) {
     .navbar {
         padding-left: 1rem;
@@ -309,4 +309,59 @@ html, body {
 .nav-links a:hover {
     color: #4f46e5;
 }
+@media (max-width: 768px) {
+    .sol-panel {
+        transform: translateX(-100%);
 
+    }
+    .iletisim-container,
+    .anasayfa-kapsayici,
+    #benkimim,
+    #neler,
+    #portfolyo
+    {
+        margin-left: 0 !important;
+        padding: 20px 15px;
+    }
+    .navbar {
+        padding-left: 1rem;
+        justify-content: space-between;
+    }
+    .nav-links {
+        display: none;
+
+    }
+    .animasyon-wrapper {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        float: none !important;
+        text-align: center;
+    }
+    .kaydir-notu {
+        position: static;
+        transform: none;
+        margin-left: 0;
+        bottom: auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .hosgeldin-animasyon {
+        transform: translateX(0);
+        margin-right: 0;
+        width: 200px;
+    }
+    .intro-yazi {
+        margin-left: 0;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .anasayfa-kapsayici .animasyon-wrapper {
+        margin-bottom: 200px;
+    }
+    .kaydir-notu {
+        bottom: 200px;
+    }
+}

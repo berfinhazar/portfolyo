@@ -1,9 +1,9 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import animasyon from './animasyon/meditasyon.json'; // animasyon dosyanı buraya koy
-import okul from './animasyon/okul.json'; // animasyon dosyanı buraya koy
-import yetenek from './animasyon/yetenek.json'; // animasyon dosyanı buraya koy
-import kod from './animasyon/kod.json'; // animasyon dosyanı buraya koy
+import animasyon from './animasyon/meditasyon.json';
+import okul from './animasyon/okul.json';
+import yetenek from './animasyon/yetenek.json';
+import kod from './animasyon/kod.json';
 import './Giris.css'
 
 
@@ -22,7 +22,7 @@ const BenKimim = () => {
     return (
         <section id="benkimim" style={styles.container}>
             <h1 style={styles.baslik}>Ben Kimim?</h1>
-            {/* Yarı Saydam Kutu: Animasyon ve Metin Yan Yana */}
+            {}
             <div style={styles.mainBox}>
                 <div style={styles.animationWrapper}>
                     <Lottie animationData={animasyon} loop={true} style={styles.animasyon} />
@@ -105,7 +105,7 @@ const styles = {
         animation: 'bgAnim 12s ease infinite',
     },
     mainBox: {
-        backgroundColor: 'rgba(255, 255, 255, 0.2)', // Yarı saydam beyaz
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
         padding: '2rem',
         borderRadius: '12px',
         maxWidth: '900px',
@@ -132,7 +132,7 @@ const styles = {
     baslik: {
         fontSize: '3rem',
         fontWeight: '800',
-        marginBottom: '1rem',  // Kutudan biraz ayrı durması için
+        marginBottom: '1rem',
         textAlign: 'center',
         color: 'white',
         textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
@@ -157,7 +157,7 @@ const styles = {
     iconWrapper: {
         width: '150px',
         height: '150px',
-        margin: '0 auto 1rem',  // Ortalamak için auto yan boşluk ve alt boşluk
+        margin: '0 auto 1rem',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

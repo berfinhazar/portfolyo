@@ -68,7 +68,7 @@ const Projelerim = () => {
                         key={id}
                         style={{
                             ...styles.card,
-                            marginLeft: index % 2 === 0 ? "1.5rem" : 0, // Proje 1 ve 3 sağdan başlasın
+                            marginLeft: index % 2 === 0 ? "1.5rem" : 0,
                         }}
                         whileHover="hover"
                         variants={cardVariants}
@@ -111,7 +111,7 @@ const styles = {
     grid: {
         display: "grid",
         gridTemplateColumns: "repeat(2, 1fr)",
-        gap: "3.5rem 3rem", // dikeyde ve yatayda daha fazla boşluk
+        gap: "3.5rem 3rem",
         justifyItems: "center",
     },
 
@@ -124,7 +124,7 @@ const styles = {
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
-        maxWidth: "450px", // daha küçük kart
+        maxWidth: "450px",
         width: "100%",
         transition: "all 0.3s ease-in-out",
     },
@@ -143,10 +143,10 @@ const styles = {
         marginBottom: "1.5rem",
     },
     githubLink: {
-        color: "#d2c8e4",            // başlangıç rengi
+        color: "#d2c8e4",
         textDecoration: "none",
         fontWeight: "700",
-        border: "2px solid #d2c8e4", // başlangıç border rengi
+        border: "2px solid #d2c8e4",
         padding: "0.5rem 1rem",
         borderRadius: "8px",
         cursor: "pointer",

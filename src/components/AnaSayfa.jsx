@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
 import './Giris.css';
-import girisAnim from './animasyon/karsilama.json'; // Ortada dönen hoş bir animasyon
+import girisAnim from './animasyon/karsilama.json';
 
 const AnaSayfa = () => {
     const [girisBitti, setGirisBitti] = useState(false);

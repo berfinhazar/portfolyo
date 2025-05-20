@@ -1,6 +1,7 @@
 import React from 'react';
 import Lottie from 'lottie-react';
 import { motion } from 'framer-motion';
+import './Giris.css'; // Genel CSS dosyasını import et
 
 import proje1Anim from './animasyon/yemek.json';
 import proje2Anim from './animasyon/oyun2.json';
@@ -59,30 +60,27 @@ const Projelerim = () => {
     return (
         <section
             id="portfolyo"
-            style={styles.container}
+            className="projelerim-container"
         >
-            <h2 style={styles.baslik}>Projelerim</h2>
-            <div style={styles.grid}>
+            <h2 className="projelerim-baslik">Projelerim</h2>
+            <div className="projelerim-grid">
                 {projeler.map(({ id, isim, animasyon, aciklama, github }, index) => (
                     <motion.div
                         key={id}
-                        style={{
-                            ...styles.card,
-                            marginLeft: index % 2 === 0 ? "1.5rem" : 0,
-                        }}
+                        className={`projelerim-card ${index % 2 === 0 ? 'projelerim-card-left' : ''}`}
                         whileHover="hover"
                         variants={cardVariants}
                     >
-                        <h3 style={styles.projeBaslik}>{isim}</h3>
-                        <div style={styles.animasyonWrapper}>
+                        <h3 className="projelerim-proje-baslik">{isim}</h3>
+                        <div className="projelerim-animasyon-wrapper">
                             <Lottie animationData={animasyon} loop={true} />
                         </div>
-                        <p style={styles.aciklama}>{aciklama}</p>
+                        <p className="projelerim-aciklama">{aciklama}</p>
                         <motion.a
                             href={github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={styles.githubLink}
+                            className="projelerim-github-link"
                             whileHover={{ color: "#ff99cc", borderColor: "#d2c8e4" }}
                         >
                             GitHub’da İncele
@@ -95,68 +93,5 @@ const Projelerim = () => {
         </section>
     );
 };
-
-const styles = {
-    container: {
-        padding: "4rem 2rem",
-        minHeight: "100vh",
-
-        marginLeft: "300px",
-    },
-    baslik: {
-        textAlign: "center",
-        fontSize: "3rem",
-        marginBottom: "3rem",
-    },
-    grid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
-        gap: "3.5rem 3rem",
-        justifyItems: "center",
-    },
-
-    card: {
-        backgroundColor: "rgba(255, 255, 255, 0.15)",
-        padding: "1.5rem",
-        borderRadius: "16px",
-        boxShadow: "0 6px 18px rgba(0,0,0,0.3)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        textAlign: "center",
-        maxWidth: "450px",
-        width: "100%",
-        transition: "all 0.3s ease-in-out",
-    },
-
-    projeBaslik: {
-        fontSize: "1.8rem",
-        marginBottom: "1rem",
-    },
-    animasyonWrapper: {
-        width: "100%",
-        maxWidth: "250px",
-        marginBottom: "1rem",
-    },
-    aciklama: {
-        fontSize: "1rem",
-        marginBottom: "1.5rem",
-    },
-    githubLink: {
-        color: "#d2c8e4",
-        textDecoration: "none",
-        fontWeight: "700",
-        border: "2px solid #d2c8e4",
-        padding: "0.5rem 1rem",
-        borderRadius: "8px",
-        cursor: "pointer",
-        transition: "background-color 0.3s, color 0.3s, border-color 0.3s",
-    },
-
-    githubLinkHover: {
-        color: "#d2c8e4",
-    },
-};
-
 
 export default Projelerim;

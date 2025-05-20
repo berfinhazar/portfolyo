@@ -38,7 +38,7 @@ function Giris() {
                 <h1 className="isim">Berfin Hazar</h1>
                 <p className="meslek">Bilgisayar Mühendisi</p>
 
-                {/* 🔽 Sosyal medya ikonları */}
+                {}
                 <div className="sosyal-linkler">
                     <a href="#" onClick={e => e.preventDefault()} target="_blank" rel="noopener noreferrer">
                         <img src={FaXTwitter} alt="Twitter" className="ikon" />

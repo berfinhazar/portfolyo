@@ -1,4 +1,3 @@
-
 html, body {
     margin: 0;
     padding: 0;
@@ -31,11 +30,11 @@ html, body {
     align-items: center;
     justify-content: center;
     transition: all 1s ease;
-
 }
 .app-container, .iletisim-container, .baska-container {
     background: transparent !important;
-}p-container {
+}
+.p-container {
     min-height: 100vh;
     background: linear-gradient(-45deg, #0a0218, #0e0322,#13042f, #0a0218, #231140);
     background-size: 400% 400%;
@@ -61,8 +60,6 @@ html, body {
     margin-top: 110px;
     transition: transform 1s ease, opacity 1s ease;
 }
-
-
 
 .sol-panel {
     position: fixed;
@@ -92,6 +89,7 @@ html, body {
     text-align: center;
     transition: opacity 1s ease, transform 1s ease;
     z-index: 1;
+    padding-top: 5rem;
 }
 
 .giris-bitti {
@@ -100,40 +98,38 @@ html, body {
     transform: translateY(-50px);
 }
 
-    .animasyon-wrapper {
-        width: 350px !important;
-        max-width: 80% !important;
-       margin-bottom: 600px;
-        margin-left: 250px !important;
-        margin-right: 0 !important;
-        float: right !important;
-        transform: translateX(0) !important;
-    }
+.animasyon-wrapper {
+    width: 350px !important;
+    max-width: 80% !important;
+    margin-bottom: 600px;
+    margin-left: 250px !important;
+    margin-right: 0 !important;
+    float: right !important;
+    transform: translateX(0) !important;
+}
 
-
-
-    .kaydir-notu {
-        position: absolute;
-        bottom: 450px;
-        left: 60%;
-        margin-left: 20px;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    }
-
+.kaydir-notu {
+    position: absolute;
+    bottom: 450px;
+    left: 60%;
+    margin-left: 20px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
 
 @keyframes yukariAsagi {
     0% { transform: translateY(0); }
     50% { transform: translateY(10px); }
     100% { transform: translateY(0); }
-}.gizli {
-     opacity: 0;
-     pointer-events: none;
-     transform: translateY(-50px);
- }
+}
+.gizli {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50px);
+}
 
 .giris-geldi {
     opacity: 1;
@@ -141,17 +137,12 @@ html, body {
     transform: translateY(0);
 }
 
-
 .profil-resmi {
     width: 200px;
     height: 200px;
-
     object-fit: cover;
-
     margin-top: -50px;
 }
-
-
 
 .isim {
     margin-top: 20px;
@@ -201,6 +192,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 5rem;
 }
 
 @media (max-width: 768px) {
@@ -240,8 +232,8 @@ html, body {
     width: 100%;
 }
 
-.form-group input,
-.form-group textarea {
+.form-input,
+.form-textarea {
     width: 100%;
     padding: 12px;
     border-radius: 8px;
@@ -265,17 +257,16 @@ html, body {
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
     background-color: #0e0322;
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
-    padding-left: 300px;
+    width: 100%;
+    justify-content: flex-start;
     color: #fff;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
-
 
 @media (max-width: 1024px) {
     .navbar {
@@ -296,23 +287,29 @@ html, body {
     gap: 2.5rem;
     margin: 0;
     padding: 0;
+    margin-left: 300px;
 }
 
-.nav-links a {
+.nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-link:hover {
     color: #4f46e5;
 }
 @media (max-width: 768px) {
     .sol-panel {
-        transform: translateX(-100%);
-
+        display: none !important;
+        position: relative !important;
+        transform: translateX(0) !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 0 !important;
     }
     .iletisim-container,
     .anasayfa-kapsayici,
@@ -322,14 +319,17 @@ html, body {
     {
         margin-left: 0 !important;
         padding: 20px 15px;
+        padding-top: 5rem;
     }
     .navbar {
         padding-left: 1rem;
-        justify-content: space-between;
+        justify-content: center;
+        margin-left: 0 !important;
+        width: 100%;
     }
     .nav-links {
         display: none;
-
+        margin-left: 0 !important;
     }
     .animasyon-wrapper {
         width: 100% !important;
@@ -363,5 +363,570 @@ html, body {
     }
     .kaydir-notu {
         bottom: 200px;
+    }
+}
+.benkimim-container {
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    margin-left: 300px;
+    background-size: 400% 400%;
+    animation: bgAnim 12s ease infinite;
+    padding-top: 5rem;
+}
+
+.benkimim-baslik {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.benkimim-main-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 3rem auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.benkimim-animation-wrapper {
+    flex: 0 0 300px;
+    max-width: 300px;
+}
+
+.benkimim-animasyon {
+    width: 100%;
+}
+
+.benkimim-text-wrapper {
+    flex: 1;
+    min-width: 250px;
+}
+
+.benkimim-kart-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.benkimim-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 30%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.benkimim-card-okul {
+    width: 400px;
+}
+
+.benkimim-icon-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benkimim-icon-animasyon {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .benkimim-container {
+        margin-left: 0 !important;
+        padding: 4rem 1rem;
+    }
+
+    .benkimim-baslik {
+        font-size: 2.5rem;
+    }
+
+    .benkimim-main-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .benkimim-animation-wrapper {
+        flex: none;
+        width: 80%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .benkimim-text-wrapper {
+        min-width: unset;
+        text-align: center;
+    }
+
+    .benkimim-kart-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .benkimim-card {
+        width: 90% !important;
+        max-width: 400px;
+        margin: 0 auto;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .benkimim-card-okul {
+        width: 90% !important;
+    }
+
+    .benkimim-card ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .benkimim-icon-wrapper {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .benkimim-container {
+        padding: 3rem 0.5rem;
+    }
+    .benkimim-baslik {
+        font-size: 2rem;
+    }
+    .benkimim-main-box {
+        padding: 1rem;
+    }
+    .benkimim-card {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    .benkimim-card h3 {
+        font-size: 1.2rem;
+    }
+    .benkimim-card ul {
+        font-size: 0.9rem;
+    }
+}
+.neler-container {
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    animation: bgAnim 12s ease infinite;
+    color: #fff;
+    margin-left: 300px;
+    padding-top: 5rem;
+}
+
+.neler-baslik {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.neler-card {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.neler-animation {
+    flex: 0 0 200px;
+    max-width: 200px;
+}
+
+.neler-content {
+    flex: 1;
+    min-width: 250px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.neler-link {
+    margin-top: 1rem;
+    display: inline-block;
+    color: #84c5ff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .neler-container {
+        margin-left: 0 !important;
+        padding: 4rem 1rem;
+    }
+
+    .neler-baslik {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .neler-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .neler-animation {
+        flex: none;
+        width: 80%;
+        max-width: 150px;
+        margin: 0 auto 1rem auto;
+    }
+
+    .neler-content {
+        min-width: unset;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .neler-container {
+        padding: 3rem 0.5rem;
+    }
+    .neler-baslik {
+        font-size: 1.8rem;
+    }
+    .neler-card {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    .neler-card h3 {
+        font-size: 1.1rem;
+    }
+}
+.projelerim-container {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    color: white;
+    margin-left: 300px;
+    padding-top: 5rem;
+}
+
+.projelerim-baslik {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.projelerim-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 3rem;
+    justify-items: center;
+}
+
+.projelerim-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.projelerim-card-left {
+    margin-left: 1.5rem;
+}
+
+
+.projelerim-proje-baslik {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.projelerim-animasyon-wrapper {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1rem;
+}
+
+.projelerim-aciklama {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.projelerim-github-link {
+    color: #d2c8e4;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #d2c8e4;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .projelerim-container {
+        margin-left: 0 !important;
+        padding: 4rem 1rem;
+    }
+
+    .projelerim-baslik {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .projelerim-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .projelerim-card {
+        margin-left: 0 !important;
+        padding: 1.2rem;
+    }
+
+    .projelerim-proje-baslik {
+        font-size: 1.5rem;
+    }
+
+    .projelerim-animasyon-wrapper {
+        max-width: 200px;
+    }
+
+    .projelerim-aciklama {
+        font-size: 0.9rem;
+    }
+
+    .projelerim-github-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .projelerim-container {
+        padding: 3rem 0.5rem;
+    }
+    .projelerim-baslik {
+        font-size: 2rem;
+    }
+    .projelerim-card {
+        padding: 1rem;
+    }
+    .projelerim-proje-baslik {
+        font-size: 1.3rem;
+    }
+    .projelerim-aciklama {
+        font-size: 0.85rem;
+    }
+}
+.iletisim-container {
+    margin-left: 300px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    color: white;
+}
+
+.iletisim-animasyon-wrapper {
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.iletisim-animasyon-player {
+    width: 100%;
+}
+
+.iletisim-baslik-metin {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.iletisim-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    margin-top: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.iletisim-button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.iletisim-button:hover {
+    background-color: #6a62f5;
+}
+
+@media (max-width: 768px) {
+    .iletisim-container {
+        margin-left: 0 !important;
+        padding: 20px 15px;
+        justify-content: center;
+    }
+
+    .iletisim-animasyon-wrapper {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .iletisim-baslik-metin {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .iletisim-form {
+        padding: 20px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .iletisim-button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .iletisim-container {
+        padding: 15px 10px;
+    }
+    .iletisim-animasyon-wrapper {
+        width: 200px;
+    }
+    .iletisim-baslik-metin {
+        font-size: 16px;
+    }
+    .iletisim-form {
+        padding: 15px;
+    }
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    background-color: #0e0322;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    justify-content: flex-start;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    margin-left: 350px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4f46e5;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        padding-left: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        text-align: center;
+        display: none;
+        margin-left: 0 !important;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem;
+    }
+    .nav-link {
+        font-size: 1rem;
     }
 }

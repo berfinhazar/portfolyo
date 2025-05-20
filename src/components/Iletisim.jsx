@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import { Player } from "@lottiefiles/react-lottie-player";
 import contactAnim from "./animasyon/mail.json";
-import './Giris.css'
+import './Giris.css';
 
 export default function Iletisim() {
     const form = useRef();
@@ -19,53 +19,31 @@ export default function Iletisim() {
             )
             .then(
                 () => {
-                    alert("Mesajınız başarıyla gönderildi!");
+                    console.log("Mesajınız başarıyla gönderildi!");
                     form.current.reset();
                 },
                 (error) => {
-                    alert("Bir hata oluştu: " + error.text);
+                    console.error("Bir hata oluştu: ", error.text);
                 }
             );
     };
 
     return (
-        <div
-            style={{
-                marginLeft: "300px",
-                minHeight: "100vh",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                padding: "40px 20px",
-                color: "white",
-            }}
-        >
-            {}
-            <div style={{ width: "350px", marginBottom: "30px" }}>
-                <Player autoplay loop src={contactAnim} style={{ width: "100%" }} />
+        <div className="iletisim-container">
+            <div className="iletisim-animasyon-wrapper">
+                <Player autoplay loop src={contactAnim} className="iletisim-animasyon-player" />
             </div>
 
-            {}
-            <h2 style={{ textAlign: "center", marginBottom: "30px", fontSize: "22px" }}>
+            <h2 className="iletisim-baslik-metin">
                 Benimle her zaman iletişime geçebilirsiniz.
             </h2>
 
-            {}
             <form
                 ref={form}
                 onSubmit={sendEmail}
-                style={{
-                    width: "100%",
-                    maxWidth: "500px",
-                    backgroundColor: "rgba(255,255,255,0.05)",
-                    padding: "30px",
-                    borderRadius: "16px",
-                    backdropFilter: "blur(10px)",
-                    boxShadow: "0 0 15px rgba(0,0,0,0.5)",
-                }}
+                className="iletisim-form"
             >
-                <div style={{ marginBottom: "20px" }}>
+                <div className="form-group">
                     <label htmlFor="user_name">Adınız Soyadınız</label>
                     <input
                         type="text"
@@ -73,19 +51,11 @@ export default function Iletisim() {
                         id="user_name"
                         required
                         placeholder="Adınızı girin"
-                        style={{
-                            width: "100%",
-                            padding: "12px",
-                            borderRadius: "8px",
-                            border: "1px solid #555",
-                            marginTop: "8px",
-                            backgroundColor: "#1a1a1a",
-                            color: "white",
-                        }}
+                        className="form-input"
                     />
                 </div>
 
-                <div style={{ marginBottom: "20px" }}>
+                <div className="form-group">
                     <label htmlFor="user_email">Mail Adresiniz</label>
                     <input
                         type="email"
@@ -93,19 +63,11 @@ export default function Iletisim() {
                         id="user_email"
                         required
                         placeholder="Mail adresinizi yazın"
-                        style={{
-                            width: "100%",
-                            padding: "12px",
-                            borderRadius: "8px",
-                            border: "1px solid #555",
-                            marginTop: "8px",
-                            backgroundColor: "#1a1a1a",
-                            color: "white",
-                        }}
+                        className="form-input"
                     />
                 </div>
 
-                <div style={{ marginBottom: "20px" }}>
+                <div className="form-group">
                     <label htmlFor="message">Mesajınız</label>
                     <textarea
                         name="message"
@@ -113,31 +75,13 @@ export default function Iletisim() {
                         rows="5"
                         required
                         placeholder="Mesajınızı buraya yazınız"
-                        style={{
-                            width: "100%",
-                            padding: "12px",
-                            borderRadius: "8px",
-                            border: "1px solid #555",
-                            marginTop: "8px",
-                            resize: "none",
-                            backgroundColor: "#1a1a1a",
-                            color: "white",
-                        }}
+                        className="form-textarea"
                     />
                 </div>
 
                 <button
                     type="submit"
-                    style={{
-                        backgroundColor: "#4f46e5",
-                        color: "white",
-                        padding: "12px 20px",
-                        borderRadius: "8px",
-                        fontWeight: "bold",
-                        border: "none",
-                        cursor: "pointer",
-                        width: "100%",
-                    }}
+                    className="iletisim-button"
                 >
                     Gönder
                 </button>

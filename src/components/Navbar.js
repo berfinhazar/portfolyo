@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className="navbar">
             <ul className="nav-links">
                 <li><a href="#anasayfa" className="nav-link">Ana Sayfa</a></li>
-                <li><a href="#benkimim" className="nav-link">Ben Kimim?</a></li>
+                <li><a href="#benkimim" className="nav-link">Hakkımda</a></li>
                 <li><a href="#neler" className="nav-link">Neler Yapabilirim?</a></li>
                 <li><a href="#portfolyo" className="nav-link">Projelerim</a></li>
                 <li><a href="#iletisim" className="nav-link">İletişim</a></li>

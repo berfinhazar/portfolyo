@@ -1,6 +1,6 @@
 ## Canlı Yayın
 
-[Portfolyomu bağlantıya tıklayarak ziyaret edebilirsiniz.](portfolyo-kohl.vercel.app)
+[Portfolyomu bağlantıya tıklayarak ziyaret edebilirsiniz.](https://portfolyo-kohl.vercel.app)
 
 ## Kullanılan Teknolojiler ve Araçlar
 
